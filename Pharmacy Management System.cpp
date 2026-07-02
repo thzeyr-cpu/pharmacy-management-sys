@@ -276,7 +276,7 @@ switch(choice){//با استفاده از swich گزینه ها رو بررسی 
         cout << "Enter drug dosage: ";
             cin >> drugDosage;
         cout <<"~°~°~°~°~°~°~°~°~°~°~°~°~"<< endl; 
-        prescriptions.push_back(Prescription(patientfirstName,patientfirstName,doctorName, drugName, drugDosage));
+        prescriptions.push_back(Prescription(patientfirstNamepatientlastName,doctorName, drugName, drugDosage));
         prescriptions[prescriptions.size()-1].show();
     break;
     }
