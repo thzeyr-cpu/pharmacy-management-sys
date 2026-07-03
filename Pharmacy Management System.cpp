@@ -98,7 +98,22 @@ class Drug{
             file >> stock ;
             file.close();
     }        
+    friend void showPrivateDrugInfo(Drug &d);
 };
+    void showPrivateDrugInfo(Drug &d){
+    cout << "Drug name: " << d.name << endl;
+    if(d.type == tablet)
+        cout << "Drug type: tablet" << endl;
+    else if(d.type == syrup)
+        cout << "Drug type: syrup" << endl;
+    else if(d.type == capsule)
+        cout << "Drug type: capsule" << endl;
+    else
+        cout << "Drug type: injection" << endl;
+        cout << "Price: " << d.price << endl;
+        cout << "Stock: " << d.stock << endl;
+}
+
 class Patient :public Person{//از کلاس person برای وراثت اینجا میتونیم استفاده کنیم چون بیمار یک شخص محسوب میشه    
     private :
          string nationalCode;//برای رعایت کپسوله سازی کد ملی بیمار رو خصوصی اعلام کردم
